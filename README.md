@@ -1,4 +1,4 @@
-# Text Classification Project: BERT and Word Embeddings
+# Text Classification Project: BERT, RoBERTa and Word Embeddings
 
 This project implements a text classification model that categorizes text into five predefined classes: **Politics**, **Sport**, **Technology**, **Entertainment**, and **Business**. It utilizes two major text embedding techniques, **Word2Vec** and **GloVe**, as well as **BERT** for fine-tuned performance. The project features an interactive interface built with **Gradio**, allowing users to input text and predict its category.
 
