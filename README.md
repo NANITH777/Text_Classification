@@ -127,4 +127,4 @@ For real-time classification, use the **Gradio** interface where users can input
 
 ## Conclusion
 
-This project demonstrates the power of combining traditional word embeddings (Word2Vec, GloVe) with advanced transformer models (BERT) to solve text classification tasks effectively. With its user-friendly interface, it is accessible for both technical and non-technical users.( NANITH 777)
+This project demonstrates the power of combining traditional word embeddings (Word2Vec, GloVe) with advanced transformer models (BERT) to solve text classification tasks effectively. With its user-friendly interface, it is accessible for both technical and non-technical users.
