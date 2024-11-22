@@ -134,6 +134,11 @@ print(f"Predicted category: {predicted_category}")
 
 For real-time classification, use the **Gradio** interface where users can input text, and the model will predict the category.
 
+## Examples
+
+<img width="947" alt="bert1" src="https://github.com/user-attachments/assets/c0364fac-8c29-4410-872f-62c109b9bcee">
+<img width="945" alt="roberta1" src="https://github.com/user-attachments/assets/1513ff5e-16a7-4448-abc0-bf16a8f87c07">
+<img width="945" alt="Bert2" src="https://github.com/user-attachments/assets/d02afd07-4fed-485e-ab02-8b6b0e93dfd4">
 ---
 
 ## Conclusion
