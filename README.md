@@ -1,19 +1,21 @@
-# Text Classification Project: BERT, RoBERTa and Word Embeddings
+# Text Classification Project: BERT, RoBERTa, and Word Embeddings
 
-This project implements a text classification model that categorizes text into five predefined classes: **Politics**, **Sport**, **Technology**, **Entertainment**, and **Business**. It utilizes two major text embedding techniques, **Word2Vec** and **GloVe**, as well as **BERT** for fine-tuned performance. The project features an interactive interface built with **Gradio**, allowing users to input text and predict its category.
+This project implements a text classification model that categorizes text into five predefined classes: **Politics**, **Sport**, **Technology**, **Entertainment**, and **Business**. It utilizes three major embedding techniques, **Word2Vec**, **GloVe**, and **BERT**, along with **RoBERTa** for fine-tuned performance. The project features an interactive interface built with **Gradio**, allowing users to input text and predict its category.
 
 ---
 
 ## Project Overview
 
-The project classifies text into distinct categories using various text embedding models and a machine learning classifier. Initially, the model is trained with **Word2Vec** and **GloVe** embeddings, but further optimization is achieved with **BERT** fine-tuning for superior accuracy. The classification labels include Politics, Sport, Technology, Entertainment, and Business, which are used for training and evaluation.
+The project classifies text into distinct categories using various text embedding models and machine learning classifiers. Initially, the model is trained with **Word2Vec** and **GloVe** embeddings, optimized further with **BERT** and **RoBERTa** fine-tuning for superior accuracy. The classification labels include Politics, Sport, Technology, Entertainment, and Business, which are used for training and evaluation.
 
 ### Key Features:
 
 - **Word2Vec** and **GloVe** embeddings for text vectorization.
-- **BERT** fine-tuning for state-of-the-art text classification.
+- **BERT** and **RoBERTa** fine-tuning for state-of-the-art text classification.
 - Interactive **Gradio** interface for live predictions.
 - **Evaluation metrics**: Accuracy, Precision, Recall, and F1 Score.
+
+---
 
 ### Performance Results
 
@@ -33,6 +35,11 @@ The project classifies text into distinct categories using various text embeddin
 
 - **BERT Model**:
   - Accuracy: 0.9812 (Fine-tuned on the dataset)
+
+- **RoBERTa Model**:
+  - Accuracy: 0.9765
+
+---
 
 ### Data Summary
 
@@ -59,11 +66,11 @@ The project includes the following key components:
    - **GloVe**: Pre-trained embeddings (`glove-wiki-gigaword-100`).
 3. **Model Training and Evaluation**:
    - Logistic Regression using Word2Vec and GloVe embeddings.
-   - Fine-tuning with **BERT** for higher accuracy.
+   - Fine-tuning with **BERT** and **RoBERTa** for higher accuracy.
 4. **Model Saving and Loading**:
    - Models are saved with `joblib` for future use.
 5. **Gradio Interface**:
-   - A simple interface for text input and category prediction using either Word2Vec, GloVe, or BERT.
+   - A simple interface for text input and category prediction using Word2Vec, GloVe, BERT, or RoBERTa.
 
 ---
 
@@ -92,7 +99,6 @@ pip install -r requirements.txt
 
 ---
 
-
 ## Project Features
 
 - **Interactive Visualizations**:
@@ -103,10 +109,14 @@ pip install -r requirements.txt
 
 - **Evaluation Metrics**:
   - Accuracy, Precision, Recall, and F1 Score.
+
 - **Word Embedding Models**:
   - **Word2Vec**: Custom-trained on project data.
   - **GloVe**: Pre-trained on a large corpus (Wikipedia + Gigaword).
-- **BERT Fine-Tuning**: Improved accuracy with a transformer-based model.
+
+- **Transformer Models**:
+  - **BERT Fine-Tuning**: Achieved 98.12% accuracy.
+  - **RoBERTa Fine-Tuning**: Achieved 97.65% accuracy.
 
 ---
 
@@ -115,9 +125,10 @@ pip install -r requirements.txt
 To classify a text, you can use the following code:
 
 ```python
-test_text = ["Artificial intelligence is revolutionizing industries by automating repetitive tasks, boosting productivity, and providing predictive analytics through large-scale data processing. Today, AI is embedded in sectors as diverse as healthcare, where algorithms enable early disease detection, and finance, where it aids in market trend analysis and risk management. The recent launch of a new smartphone has marked a technological turning point with an advanced camera system that rivals professional-grade devices, featuring high-resolution sensors and AI-optimized low-light photography. These innovations are redefining mobile photography, expanding creative possibilities for users."
+test_text = [
+    "Artificial intelligence is revolutionizing industries by automating repetitive tasks, boosting productivity, and providing predictive analytics through large-scale data processing. Today, AI is embedded in sectors as diverse as healthcare, where algorithms enable early disease detection, and finance, where it aids in market trend analysis and risk management."
 ]
-predicted_category = predict(test_text)
+predicted_category = predict(test_text, model="RoBERTa")
 print(f"Predicted category: {predicted_category}")
 ```
 
@@ -127,4 +138,4 @@ For real-time classification, use the **Gradio** interface where users can input
 
 ## Conclusion
 
-This project demonstrates the power of combining traditional word embeddings (Word2Vec, GloVe) with advanced transformer models (BERT) to solve text classification tasks effectively. With its user-friendly interface, it is accessible for both technical and non-technical users.
+This project demonstrates the power of combining traditional word embeddings (Word2Vec, GloVe) with advanced transformer models (BERT, RoBERTa) to solve text classification tasks effectively. With its user-friendly interface, it is accessible for both technical and non-technical users. By leveraging **RoBERTa** alongside **BERT**, it achieves near state-of-the-art performance in text classification.
